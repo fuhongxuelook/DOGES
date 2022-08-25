@@ -58,6 +58,6 @@ module.exports = {
     currency: "USD",
   },
   etherscan: {
-    apiKey: process.env.POLYGON_API_KEY,
+    apiKey: process.env.BSC_API_KEY,
   },
 };

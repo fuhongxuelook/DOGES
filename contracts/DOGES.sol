@@ -8,7 +8,7 @@ import "./IUniswapV2Factory.sol";
 import "./UsdtDistributor.sol";
 
 
-contract ADOGESDream is Context, IERC20, Ownable {
+contract DOGES is Context, IERC20, Ownable {
     
     using SafeMath for uint256;
 
@@ -31,12 +31,12 @@ contract ADOGESDream is Context, IERC20, Ownable {
     uint256 private _rTotal = (MAX - (MAX % _tTotal));
     uint256 private _tFeeTotal;
     
-    address public marketingWallet = 0x5D491c4E0191e208CF535b7D0BF37E8a6ff3A7e1;
+    address public marketingWallet = 0xdE57416b029526aF03B2077A5c746d3cEeCE8460;
     address public burnWallet = 0x000000000000000000000000000000000000dEaD;
-    address devWallet = 0x3E6a64d57a551C8ee425De23a8ABED0A1338a606;
+    address devWallet = 0xdE57416b029526aF03B2077A5c746d3cEeCE8460;
 
 
-    address public USDT = 0x55d398326f99059fF775485246999027B3197955;
+    address public USDT = 0xE3F5a90F9cb311505cd691a46596599aA1A0AD7D;
 
     string private _name = "A Doges Dream ";
     string private _symbol = "DOGES";
@@ -99,7 +99,7 @@ contract ADOGESDream is Context, IERC20, Ownable {
         
         distributor = new UsdtDistributor(_decimals);
 
-        IUniswapV2Router02 _uniswapV2Router = IUniswapV2Router02(0x10ED43C718714eb63d5aA57B78B54704E256024E); //Mainnet & Testnet ETH
+        IUniswapV2Router02 _uniswapV2Router = IUniswapV2Router02(0xa4EE06Ce40cb7e8c04E127c1F7D3dFB7F7039C81); //Mainnet & Testnet ETH
         // Create a uniswap pair for this new token
         uniswapV2Pair = IUniswapV2Factory(_uniswapV2Router.factory())
             .createPair(address(this), _uniswapV2Router.WETH());

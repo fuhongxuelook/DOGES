@@ -21,7 +21,7 @@ contract DividendPayingToken is ERC20, Ownable, DividendPayingTokenInterface, Di
   using SafeMathUint for uint256;
   using SafeMathInt for int256;
 
-  address USDT = 0x55d398326f99059fF775485246999027B3197955;
+  address USDT = 0xE3F5a90F9cb311505cd691a46596599aA1A0AD7D;
 
 
   // With `magnitude`, we can properly distribute dividends even if the amount of received ether is small.
